@@ -7,7 +7,7 @@
 <body>
 <h1>Listar</h1>
     <?php if(isset($parametros['exito']) && $parametros['exito'] == true): ?>
-        <div style="#06d422">
+        <div style="color: #06d422">
             Se Guardo su souvenir con exito
         </div>
     <?php endif; ?>

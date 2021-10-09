@@ -41,4 +41,26 @@
             return $souvenires;
         }
 
+        public static function modificarDatosDeSouvenirs($id,$nombre,$descripcion,$stock,$precio){
+            if($nombre != "" && $id != "" && $descripcion != "" && $stock != "" && $precio != ""){
+                try{
+                    $u = new souvenirsModelo();
+                    $u -> id = $id;
+                    $u -> nombre = $nombre;
+                    $u -> descripcion = $descripcion;
+                    $u -> stock = $stock;
+                    $u -> precio = $precio;
+                    $u -> actualizarSouvenir();
+                    
+                    return generarHtml('modificar', ['exito' => true]);
+                }
+                catch(Exception $e){
+                    error_log();
+                    header("Location: /modificar");
+                }
+            } else {
+                return generarHtml('/modificar', ['exito' => false]);
+            }
+        }
+
 }

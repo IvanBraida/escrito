@@ -34,6 +34,16 @@
             break;
         case '/listarSouvenir':
             cargarVista('listarSouvenir');
-            break;    
+            break; 
+        case '/modificarSouvenir':
+            cargarVista('modificar');
+            break;
+        case '/modificarDatos':
+            if($_SERVER['REQUEST_METHOD'] === "POST") souvenirsController::modificarDatosDeSouvenirs($_POST['id'],$_POST['nombre'], $_POST['descripcion'], $_POST['stock'], $_POST['precio']);
+            if($_SERVER['REQUEST_METHOD'] === "GET") cargarVista('modificar');
+            
+            break;
+        
+
        
     }

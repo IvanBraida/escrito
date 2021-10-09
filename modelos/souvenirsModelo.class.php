@@ -40,7 +40,7 @@
         $this -> sentencia -> bind_param("i", $this ->id);
     }
     private function prepararListadoDeSouvenirs(){
-        $sql = "SELECT id,nombre,descripcion,stock,precio FROM souvenirs";
+        $sql = "SELECT id,nombre,descripcion,stock,precio,fechaDeAlta FROM souvenirs";
         $this -> sentencia = $this -> conexion -> prepare($sql);
     }
 
@@ -51,6 +51,24 @@
         
         return $resultado;
 
+    }
+    public function actualizarSouvenir(){
+        $this -> prepararActualizacionDeSouvenir();
+        $this -> sentencia -> execute();
+    }
+
+    private function prepararActualizacionDeSouvenir(){
+        
+        $sql = "UPDATE souvenirs SET  nombre = ?, descripcion = ?, stock = ?, precio = ?  WHERE id  = ?";
+        $this -> sentencia = $this-> conexion -> prepare($sql);
+        $this -> sentencia -> bind_param("ssiii",
+            $this -> nombre,
+            $this -> descripcion,
+            $this -> stock,
+            $this -> precio,
+            $this -> id
+    
+        );
     }
 
 }

@@ -10,6 +10,7 @@
 	<button action="submit" formaction="/insertarSouvenirs">Insertar Souvenir</button> </br>
 	<button action="submit" formaction="/bajaSouvenirs">Dar de baja</button> </br>
 	<button action="submit" formaction="/listarSouvenir">Listar</button> </br>
+	<button action="submit" formaction="/modificarSouvenir">Modificar</button> </br>
 
 	</form>
 
