@@ -5,7 +5,7 @@
 	<title>Alta De Souvenirs</title>
 </head>
 <body>
-<h1>Insertar Souvenir</h1>
+<h1>Listar</h1>
     <?php if(isset($parametros['exito']) && $parametros['exito'] == true): ?>
         <div style="#06d422">
             Se Guardo su souvenir con exito

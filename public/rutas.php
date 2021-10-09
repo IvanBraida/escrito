@@ -31,7 +31,9 @@
 
         case '/borrar':
             if($_SERVER['REQUEST_METHOD'] === "POST") souvenirsController::eliminarSouvenirs($_POST['id']);
-            if($_SERVER['REQUEST_METHOD'] === "GET") header('Location: /usuarios-pendientes');
             break;
+        case '/listarSouvenir':
+            cargarVista('listarSouvenir');
+            break;    
        
     }
