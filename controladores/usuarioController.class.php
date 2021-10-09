@@ -6,6 +6,7 @@
 
         public static function iniciarSesion($usuario,$contrasenia){
             try{
+                
               $u = new usuarioModelo();
               $u -> usuario = $usuario;
               $u -> contrasenia = $contrasenia;
@@ -16,6 +17,7 @@
             
             }
             catch(Exception $e){
+               
                 error_log("fallo login del usuario ");
                 generarHtml("login"  , ["falla" => true]);
             }
@@ -26,7 +28,7 @@
         public static function MostrarLogin($tipoDeUsuario){
             session_start();
             if(isset($_SESSION['autenticado'])) header ("Location: /principal");
-            else return cargarVista("login". $tipoDeUsuario);
+            else return cargarVista("login");
         
         }
     
@@ -41,6 +43,7 @@
             $_SESSION['usuario'] = $usuario -> usuario;
             $_SESSION['autenticado'] = true; 
         }
+      
     
         
 
