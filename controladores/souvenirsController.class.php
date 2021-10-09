@@ -62,5 +62,5 @@
                 return generarHtml('/modificar', ['exito' => false]);
             }
         }
-
+        
 }

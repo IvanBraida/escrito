@@ -25,7 +25,7 @@
             <th>Descripcion</th>
             <th>Stock</th>
             <th>Precio</th>
-            <th>fecha</th>
+            
         </thead>
         <form action="/modificarDatos" method="POST">
         <tbody>

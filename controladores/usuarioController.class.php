@@ -13,7 +13,7 @@
               $u -> autenticar(); 
               self::crearSesion($u);
 
-              header("Location: /principal");
+              header("Location: /menuPrincipal");
             
             }
             catch(Exception $e){
@@ -25,9 +25,9 @@
             
         }
 
-        public static function MostrarLogin($tipoDeUsuario){
+        public static function MostrarLogin(){
             session_start();
-            if(isset($_SESSION['autenticado'])) header ("Location: /principal");
+            if(isset($_SESSION['autenticado'])) header ("Location: /menuPrincipal");
             else return cargarVista("login");
         
         }
@@ -44,7 +44,8 @@
             $_SESSION['autenticado'] = true; 
         }
       
-    
+      
+
         
 
 }       
