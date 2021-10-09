@@ -3,10 +3,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Menu Principal</title>
+	<title>Modificar</title>
 </head>
 <body>
-<h1>Menu Principal</h1>
+<h1>Modificar</h1>
 <?php if(isset($parametros['exito']) && $parametros['exito'] == true): ?>
         <div style="color: #06d422">
             Se modifico con exito
